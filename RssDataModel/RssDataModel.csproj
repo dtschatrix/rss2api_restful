@@ -40,9 +40,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="NewsPostClass">
-      <HintPath>..\NewsPostClass\obj\Debug\NewsPostClass.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -54,11 +51,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RssContext.cs" />
-    <Compile Include="Migrations\202002061027193_Initial.cs" />
-    <Compile Include="Migrations\202002061027193_Initial.designer.cs">
-      <DependentUpon>202002061027193_Initial.cs</DependentUpon>
+    <Compile Include="Dto\ItemList.cs" />
+    <Compile Include="Dto\FeedList.cs" />
+    <Compile Include="Dto\NewsPost.cs" />
+    <Compile Include="Migrations\202002131456302_Initial.cs" />
+    <Compile Include="Migrations\202002131456302_Initial.designer.cs">
+      <DependentUpon>202002131456302_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002131506297_Name_Correctness.cs" />
+    <Compile Include="Migrations\202002131506297_Name_Correctness.designer.cs">
+      <DependentUpon>202002131506297_Name_Correctness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Classes\ItemListRepo.cs" />
+    <Compile Include="Repositories\Classes\FeedListRepo.cs" />
+    <Compile Include="Repositories\Classes\NewsPostRepo.cs" />
+    <Compile Include="Repositories\Classes\UnitOfWork.cs" />
+    <Compile Include="Repositories\Interfaces\IFeedList.cs" />
+    <Compile Include="Repositories\Interfaces\IItemList.cs" />
+    <Compile Include="Repositories\Interfaces\INewsPost.cs" />
+    <Compile Include="Repositories\CoreRepo\IRepository.cs" />
+    <Compile Include="Repositories\CoreRepo\Repository.cs" />
+    <Compile Include="Repositories\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="RssContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,16 +81,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NewsPostClass\RssModel.csproj">
-      <Project>{d49ed7e5-1dbf-48de-a7c2-2cd5c53dc2f6}</Project>
-      <Name>RssModel</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002061027193_Initial.resx">
-      <DependentUpon>202002061027193_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002131456302_Initial.resx">
+      <DependentUpon>202002131456302_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002131506297_Name_Correctness.resx">
+      <DependentUpon>202002131506297_Name_Correctness.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

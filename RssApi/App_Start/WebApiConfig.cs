@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Routing;
+using System.Web.Http.Cors;
 
 namespace RssApi
 {
@@ -11,7 +12,7 @@ namespace RssApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -24,6 +25,7 @@ namespace RssApi
                 name: "JsonApi",
                 routeTemplate: "api/{controller}/{url}",
                 defaults: new {url = RouteParameter.Optional});
+            //config.Services.Add();
 
         }
     }
