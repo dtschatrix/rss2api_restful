@@ -20,10 +20,10 @@ namespace RssDataModel.Repositories
 
         public async Task<IEnumerable<FeedList>> GetFeedList(int id)
         {
-           return await RssContext.FeedLists.Include(a => a.Id).ToListAsync();
+            return await RssContext.FeedLists.Include(a => a.Id).ToListAsync();
         }
 
-        
-        
+
+
     }
 }

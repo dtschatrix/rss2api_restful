@@ -13,7 +13,7 @@ namespace RssApi.Models.APIMethods
 
         #endregion
 
-        
+
 
         public HttpClient SpecialClient(string url)
         {
@@ -24,7 +24,7 @@ namespace RssApi.Models.APIMethods
             return client;
         }
 
-       
+
 
 
 

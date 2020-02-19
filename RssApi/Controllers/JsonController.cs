@@ -18,7 +18,7 @@ namespace RssApi.Controllers
         //Get api/<controller>/?url= ...
         [HttpGet]
         public async Task<IHttpActionResult> Get(string url)
-        {
+            {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             Rss2JsonAPI rssService = new Rss2JsonAPI();

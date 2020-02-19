@@ -14,7 +14,7 @@ namespace RssDataModel
         public string status { get; set; }
         public FeedList feed { get; set; }
         public List<ItemList> items { get; set; }
- 
+
 
     }
 }

@@ -3,7 +3,7 @@ using RssDataModel.Repositories.Interfaces;
 
 namespace RssDataModel.Repositories.Classes
 {
-    public  class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         protected readonly RssContext _rssContext;
         public INewsPost NewsPost { get; }
@@ -23,7 +23,7 @@ namespace RssDataModel.Repositories.Classes
             _rssContext.Dispose();
         }
 
-       
+
         public Task<int> Complete()
         {
             return _rssContext.SaveChangesAsync();

@@ -16,6 +16,6 @@ namespace RssDataModel
         public string Image { get; set; }
 
         public virtual NewsPost NewsPost { get; set; }
-       
+
     }
 }

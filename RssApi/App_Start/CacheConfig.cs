@@ -19,15 +19,15 @@ namespace RssApi
         //            RequestModelHandler.UrlDateDictionary.Add(new Uri(item),DateTime.Now);
         //        }
         //    }
-            
+
 
         //    return Dictionary<Uri, DateTime > = null;
         //}
 
         public static void CacheDictionary()
         {
-           DbMethodsRssService dmrs = new DbMethodsRssService();
-           dmrs.CacheDictionary();
+            DbMethodsRssService dmrs = new DbMethodsRssService();
+            dmrs.CacheDictionary();
         }
     }
 }

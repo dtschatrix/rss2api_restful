@@ -4,7 +4,7 @@ namespace RssDataModel
 {
     public class ItemList
     {
-        
+
         public int Id { get; set; }
         public string Title { get; set; }
         public DateTime? PubDate { get; set; }
@@ -15,10 +15,10 @@ namespace RssDataModel
         public string Description { get; set; }
         public string Content { get; set; }
         public string[] Categories { get; set; }
-       
-        
+
+
         public virtual NewsPost NewsPost { get; set; }
-        
+
 
     }
 }

@@ -9,7 +9,7 @@ namespace RssService
 
         static RequestModelHandler()
         {
-            UrlDateDictionary = new Dictionary<Uri, DateTime>();    
+            UrlDateDictionary = new Dictionary<Uri, DateTime>();
         }
         //TODO: refactor this?
         public static bool AddUriElement(Uri url, DateTime date, IDictionary<Uri, DateTime> dictionary)

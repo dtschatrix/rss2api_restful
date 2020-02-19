@@ -16,8 +16,13 @@ namespace RssDataModel.Repositories
         {
         }
 
-        public async Task <IEnumerable<NewsPost>> GetNewsPost(int id)
+        public async Task<IEnumerable<NewsPost>> GetNewsPost(int id)
         {
+            //context.GetWithInclude
+            //(res => res.feed.Url == url,
+            //    rss => rss.items,
+            //    rss => rss.feed);
+
             return await RssContext.NewsPosts.Include(news => news.NewsId == id).ToListAsync();
         }
     }

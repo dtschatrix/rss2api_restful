@@ -7,7 +7,7 @@ using RssDataModel;
 
 namespace RssDataModel.Repositories.Interfaces
 {
-    public interface INewsPost
+    public interface INewsPost : IRepository<NewsPost>
     {
         Task<IEnumerable<NewsPost>> GetNewsPost(int id);
     }

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace RssDataModel.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public abstract class Repository<T> : IRepository<T> where T : class
     {
         protected readonly DbContext Context;
         private DbSet<T> _contextSet;
 
-        public Repository(DbContext context)
+        protected Repository(DbContext context)
         {
             Context = context;
             _contextSet = context.Set<T>();
@@ -24,7 +24,7 @@ namespace RssDataModel.Repositories
             return includeProperties
                 .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
         }
-        public T GetWithInclude(Func<T, bool> predicate, params Expression<Func<T, object>>[] includeProperties )
+        public T GetWithInclude(Func<T, bool> predicate, params Expression<Func<T, object>>[] includeProperties)
         {
             var query = Include(includeProperties);
             return query.Where(predicate).FirstOrDefault();
@@ -35,16 +35,14 @@ namespace RssDataModel.Repositories
             return _contextSet.Where(predicate);
         }
 
-        public async Task Add(T entity)
+        public Task Add(T entity)
         {
-            _contextSet.Add(entity);
-            await Context.SaveChangesAsync();
+           return Task.Run(() => _contextSet.Add(entity));
         }
 
-        public async Task AddRange(IEnumerable<T> entity)
+        public Task AddRange(IEnumerable<T> entity)
         {
-            _contextSet.AddRange(entity);
-            await Context.SaveChangesAsync();
+            return Task.Run(() => _contextSet.AddRange(entity));
         }
 
 

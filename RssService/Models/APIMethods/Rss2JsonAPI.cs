@@ -42,10 +42,12 @@ namespace RssService
                 }
                 else
                 {
+                    RequestModelHandler.AddUriElement(new Uri(url), DateTime.Now,
+                        RequestModelHandler.UrlDateDictionary);
                     HttpSpecial http = new HttpSpecial();
-                    var client = http.SpecialClient(url);
+                    var client = http.SpecialClient(url);   
                     var response = await GetApiResponseAsync(client); //get response httpcontent as string
-                    await Task.Run(()=> _dmrs.ApiResponseToDtoAsync(response)); // add result to base
+                    await Task.Run(() => _dmrs.ApiResponseToDtoAsync(response)); // add result to base
                     response = await Task.Run(() => _dmrs.GetDtoFromBaseAsync(url)); //this is bad practice
                     return response;
 

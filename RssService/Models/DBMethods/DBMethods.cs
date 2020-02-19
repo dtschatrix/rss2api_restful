@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RssApi.Models.APIMethods;
 using RssDataModel.Repositories;
+using RssDataModel.Repositories.Classes;
 
 namespace RssService
 {
-    public class DbMethodsRssService 
+    public class DbMethodsRssService
     {
         #region Public Static Property
 
@@ -23,14 +24,10 @@ namespace RssService
         #region Singleton
         private static DbMethodsRssService _dmrsInstance;
 
+
         public static DbMethodsRssService GetInstance()
         {
-            if (_dmrsInstance == null)
-            {
-                _dmrsInstance = new DbMethodsRssService();
-            }
-
-            return _dmrsInstance;
+            return _dmrsInstance ?? (_dmrsInstance = new DbMethodsRssService());
         }
 
         #endregion
@@ -39,19 +36,24 @@ namespace RssService
 
         public async Task InsertNewsPostAsync(NewsPost news, RssContext rssContext)
         {
-            var context = new Repository<NewsPost>(rssContext);
-            await context.Add(news);
+            using (var unitOfWork = new UnitOfWork(new RssContext()))
+            {
+                await unitOfWork.NewsPost.Add(news);
+                await unitOfWork.Complete();
+            }
+
+            //await context.Add(news);
         }
 
         public async Task<string> GetDtoFromBaseAsync(string url)
         {
-            var context = new Repository<NewsPost>(new RssContext());
+            using (var unitOfWork = new UnitOfWork(new RssContext()))
             {
-                var result = context.GetWithInclude
-                    (res => res.feed.Url == url, 
+                var result = unitOfWork.NewsPost.GetWithInclude(res => res.feed.Url == url,
                     rss => rss.items,
                     rss => rss.feed);
-                
+                await unitOfWork.NewsPost.Add(result);
+                await unitOfWork.Complete();
                 return await Task.Run(() => SerializeDto(result));
             }
 
@@ -64,15 +66,16 @@ namespace RssService
 
         public Task CacheDictionary()
         {
-            //this is hack
-            RssContext rssContext = new RssContext();
-            var context = new Repository<FeedList>(rssContext);
-            var query = context.Get(rss=> rss.Url).Distinct();
-            foreach (var item in query)
+            using (var unitOfWork = new UnitOfWork(new RssContext()) )
             {
-                RequestModelHandler.UrlDateDictionary.Add(new Uri(item), DateTime.Now);
+                var query = unitOfWork.FeedList.Get(rss => rss.Url).Distinct();
+                foreach (var item in query)
+                {
+                    RequestModelHandler.UrlDateDictionary.Add(new Uri(item), DateTime.Now);
+                }
+                return Task.CompletedTask;
             }
-            return Task.CompletedTask;
+           
         }
 
         public async Task ApiResponseToDtoAsync(string response)
@@ -91,4 +94,4 @@ namespace RssService
 
 
     }
-    }
+}
