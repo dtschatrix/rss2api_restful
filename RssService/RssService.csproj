@@ -60,13 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\APIMethods\HttpSpecial.cs" />
-    <Compile Include="Models\APIMethods\RequestModelHandler.cs" />
-    <Compile Include="Models\APIMethods\Rss2JsonAPI.cs" />
-    <Compile Include="Models\DBMethods\DBMethods.cs" />
+    <Compile Include="Models\API\HttpSpecialFactory.cs" />
+    <Compile Include="Models\API\RequestModelHandler.cs" />
+    <Compile Include="Services\RssApiService.cs" />
+    <Compile Include="Services\DBServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RssContracts\RssContracts.csproj">
+      <Project>{1af2003d-4151-4dee-b43a-a65cfc65f599}</Project>
+      <Name>RssContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RssDataModel\RssDataModel.csproj">
       <Project>{842ee19a-9a11-4502-bf58-af7859f7c013}</Project>
       <Name>RssDataModel</Name>
@@ -76,6 +80,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

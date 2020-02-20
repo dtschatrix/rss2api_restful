@@ -8,7 +8,7 @@
         public override void Up()
         {
             CreateTable(
-                "dbo.FeedLists",
+                "dbo.Feeds",
                 c => new
                     {
                         Id = c.Int(nullable: false),
@@ -28,13 +28,13 @@
                 c => new
                     {
                         NewsId = c.Int(nullable: false, identity: true),
-                        message = c.String(),
-                        status = c.String(),
+                        Message = c.String(),
+                        Status = c.String(),
                     })
                 .PrimaryKey(t => t.NewsId);
             
             CreateTable(
-                "dbo.Itemlists",
+                "dbo.ItemLists",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -56,13 +56,13 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.FeedLists", "Id", "dbo.NewsPosts");
-            DropForeignKey("dbo.Itemlists", "NewsPost_NewsId", "dbo.NewsPosts");
-            DropIndex("dbo.Itemlists", new[] { "NewsPost_NewsId" });
-            DropIndex("dbo.FeedLists", new[] { "Id" });
-            DropTable("dbo.Itemlists");
+            DropForeignKey("dbo.Feeds", "Id", "dbo.NewsPosts");
+            DropForeignKey("dbo.ItemLists", "NewsPost_NewsId", "dbo.NewsPosts");
+            DropIndex("dbo.ItemLists", new[] { "NewsPost_NewsId" });
+            DropIndex("dbo.Feeds", new[] { "Id" });
+            DropTable("dbo.ItemLists");
             DropTable("dbo.NewsPosts");
-            DropTable("dbo.FeedLists");
+            DropTable("dbo.Feeds");
         }
     }
 }

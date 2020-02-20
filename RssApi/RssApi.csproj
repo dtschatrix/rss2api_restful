@@ -219,6 +219,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RssContracts\RssContracts.csproj">
+      <Project>{1af2003d-4151-4dee-b43a-a65cfc65f599}</Project>
+      <Name>RssContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RssService\RssService.csproj">
       <Project>{c40eeb7f-3ebf-4393-81ef-a0916d8436e4}</Project>
       <Name>RssService</Name>

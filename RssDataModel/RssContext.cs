@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
-using RssDataModel;
+﻿using System.Data.Entity;
+using RssContracts;
+
 namespace RssDataModel
 {
     public class RssContext:DbContext
@@ -11,12 +11,7 @@ namespace RssDataModel
         }
         public virtual DbSet<NewsPost> NewsPosts { get; set; }
         public virtual DbSet<ItemList> ItemLists { get; set; }
-        public virtual DbSet<FeedList>FeedLists { get; set; }
-
-        public void DbContext()
-        {
-            
-        }
+        public virtual DbSet<Feed>FeedLists { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

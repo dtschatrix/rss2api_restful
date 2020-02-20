@@ -3,12 +3,14 @@ C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\Rss
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\RssDataModel.pdb
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\EntityFramework.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\RssContracts.dll
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\RssContracts.pdb
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\RssContracts.dll.config
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\EntityFramework.xml
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.csprojAssemblyReference.cache
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.Migrations.Initial.resources
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.Migrations.Name_Correctness.resources
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.csproj.GenerateResource.cache
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.csproj.CopyComplete
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.pdb
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.Migrations.Initial.resources
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssDataModel\obj\Debug\RssDataModel.csproj.GenerateResource.cache

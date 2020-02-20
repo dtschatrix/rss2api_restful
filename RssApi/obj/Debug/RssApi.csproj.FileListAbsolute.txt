@@ -68,7 +68,8 @@ C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Microsoft.Net.H
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Newtonsoft.Json.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Ninject.dll
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.dll
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssContracts.dll
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Buffers.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.ComponentModel.Annotations.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Memory.dll
@@ -88,8 +89,11 @@ C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Web.WebP
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Web.WebPages.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Web.WebPages.Razor.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\WebGrease.dll
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.pdb
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.dll.config
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.dll
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssContracts.pdb
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssContracts.dll.config
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.pdb
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.dll.config
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\EntityFramework.xml
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\EntityFramework.SqlServer.xml
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Microsoft.AspNetCore.Cors.xml
@@ -123,10 +127,9 @@ C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Web.WebP
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\System.Web.WebPages.Razor.xml
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Antlr3.Runtime.pdb
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.pdb
+C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssDataModel.dll.config
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\obj\Debug\RssApi.csprojAssemblyReference.cache
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\obj\Debug\RssApi.csproj.CopyComplete
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\obj\Debug\RssApi.dll
 C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\obj\Debug\RssApi.pdb
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.dll
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.pdb
-C:\Users\hlib.cherkashyn\source\repos\EF6_TestProject\RssApi\bin\RssService.dll.config

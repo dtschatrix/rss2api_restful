@@ -13,7 +13,7 @@ namespace RssDataModel.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202002131456302_Initial"; }
+            get { return "202002201537161_Initial"; }
         }
         
         string IMigrationMetadata.Source

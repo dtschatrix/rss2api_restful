@@ -51,24 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\ItemList.cs" />
-    <Compile Include="Dto\FeedList.cs" />
-    <Compile Include="Dto\NewsPost.cs" />
-    <Compile Include="Migrations\202002131456302_Initial.cs" />
-    <Compile Include="Migrations\202002131456302_Initial.designer.cs">
-      <DependentUpon>202002131456302_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202002201537161_Initial.cs" />
+    <Compile Include="Migrations\202002201537161_Initial.designer.cs">
+      <DependentUpon>202002201537161_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002131506297_Name_Correctness.cs" />
-    <Compile Include="Migrations\202002131506297_Name_Correctness.designer.cs">
-      <DependentUpon>202002131506297_Name_Correctness.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Repositories\Classes\ItemListRepo.cs" />
-    <Compile Include="Repositories\Classes\FeedListRepo.cs" />
-    <Compile Include="Repositories\Classes\NewsPostRepo.cs" />
+    <Compile Include="Repositories\Classes\ItemListRepository.cs" />
+    <Compile Include="Repositories\Classes\FeedRepository.cs" />
+    <Compile Include="Repositories\Classes\NewsPostRepository.cs" />
     <Compile Include="Repositories\Classes\UnitOfWork.cs" />
-    <Compile Include="Repositories\Interfaces\IFeedList.cs" />
-    <Compile Include="Repositories\Interfaces\IItemList.cs" />
-    <Compile Include="Repositories\Interfaces\INewsPost.cs" />
+    <Compile Include="Repositories\Interfaces\IFeedRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IItemListRepository.cs" />
+    <Compile Include="Repositories\Interfaces\INewsPostRepository.cs" />
     <Compile Include="Repositories\CoreRepo\IRepository.cs" />
     <Compile Include="Repositories\CoreRepo\Repository.cs" />
     <Compile Include="Repositories\Interfaces\IUnitOfWork.cs" />
@@ -81,14 +74,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002131456302_Initial.resx">
-      <DependentUpon>202002131456302_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002131506297_Name_Correctness.resx">
-      <DependentUpon>202002131506297_Name_Correctness.cs</DependentUpon>
+    <ProjectReference Include="..\RssContracts\RssContracts.csproj">
+      <Project>{1af2003d-4151-4dee-b43a-a65cfc65f599}</Project>
+      <Name>RssContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002201537161_Initial.resx">
+      <DependentUpon>202002201537161_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

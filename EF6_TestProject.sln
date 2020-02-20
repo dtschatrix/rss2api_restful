@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssApi", "RssApi\RssApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssService", "RssService\RssService.csproj", "{C40EEB7F-3EBF-4393-81EF-A0916D8436E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssContracts", "RssContracts\RssContracts.csproj", "{1AF2003D-4151-4DEE-B43A-A65CFC65F599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C40EEB7F-3EBF-4393-81EF-A0916D8436E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C40EEB7F-3EBF-4393-81EF-A0916D8436E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C40EEB7F-3EBF-4393-81EF-A0916D8436E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF2003D-4151-4DEE-B43A-A65CFC65F599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF2003D-4151-4DEE-B43A-A65CFC65F599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF2003D-4151-4DEE-B43A-A65CFC65F599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF2003D-4151-4DEE-B43A-A65CFC65F599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

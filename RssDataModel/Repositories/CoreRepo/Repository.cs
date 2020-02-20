@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RssDataModel.Repositories
@@ -29,24 +28,19 @@ namespace RssDataModel.Repositories
             var query = Include(includeProperties);
             return query.Where(predicate).FirstOrDefault();
         }
-
         public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
         {
             return _contextSet.Where(predicate);
         }
-
         public Task Add(T entity)
         {
-           return Task.Run(() => _contextSet.Add(entity));
+            return Task.Run(() => _contextSet.Add(entity));
         }
-
         public Task AddRange(IEnumerable<T> entity)
         {
             return Task.Run(() => _contextSet.AddRange(entity));
         }
-
-
-        public IEnumerable<TType> Get<TType>(Expression<Func<T, TType>> select) where TType : class
+        public IEnumerable<TType> Select<TType>(Expression<Func<T, TType>> select) where TType : class
         {
             return _contextSet.Select(select).ToList();
         }

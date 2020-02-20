@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using RssDataModel;
+using RssContracts;
 
 namespace RssDataModel.Repositories.Interfaces
 {
-    public interface IItemList : IRepository<ItemList>
+    public interface IItemListRepository : IRepository<ItemList>
     {
         Task<IEnumerable<ItemList>> GetNewsItems(int id);
-
     }
 }

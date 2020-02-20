@@ -6,9 +6,9 @@ namespace RssDataModel.Repositories
 {
    public interface IUnitOfWork: IDisposable
     {
-        INewsPost NewsPost { get; }
-        IFeedlist FeedList { get;  }
-        IItemList ItemList { get; }
+        INewsPostRepository NewsPostRepository { get; }
+        IFeedRepository FeedList { get;  }
+        IItemListRepository ItemListRepository { get; }
 
         Task<int> Complete();
     }

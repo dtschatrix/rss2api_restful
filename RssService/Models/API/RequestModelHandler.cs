@@ -1,33 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RssService
+namespace RssService.Models.API
 {
     public class RequestModelHandler
     {
-        public static IDictionary<Uri, DateTime> UrlDateDictionary { get; set; }
+        public IDictionary<Uri, DateTime> UrlDateDictionary { get; set; }
 
-        static RequestModelHandler()
+        private static RequestModelHandler _requestModelHandler;
+
+        public RequestModelHandler()
         {
             UrlDateDictionary = new Dictionary<Uri, DateTime>();
         }
-        //TODO: refactor this?
-        public static bool AddUriElement(Uri url, DateTime date, IDictionary<Uri, DateTime> dictionary)
+
+        public static RequestModelHandler GetInstance()
         {
+            return _requestModelHandler ?? (_requestModelHandler = new RequestModelHandler());
+        }
+        public bool AddUriElement(Uri url, IDictionary<Uri, DateTime> dictionary)
+        {
+            var date = DateTime.Now;
             if (!dictionary.ContainsKey(url))
             {
                 dictionary.Add(url, date);
                 return true;
             }
-
             if (dictionary[url].AddHours(1) < DateTime.Now)
             {
                 dictionary[url] = date;
                 return true;
             }
-
             return false;
-
         }
     }
 }
