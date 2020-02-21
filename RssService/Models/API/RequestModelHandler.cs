@@ -9,7 +9,7 @@ namespace RssService.Models.API
 
         private static RequestModelHandler _requestModelHandler;
 
-        public RequestModelHandler()
+        internal RequestModelHandler()
         {
             UrlDateDictionary = new Dictionary<Uri, DateTime>();
         }

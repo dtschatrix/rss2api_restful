@@ -43,7 +43,7 @@ namespace RssService
         }
         public async Task CacheDictionary()
         {
-            var rmh = new RequestModelHandler();
+            var rmh = RequestModelHandler.GetInstance();
             var ras = new RssApiService();
             var http = new HttpSpecialFactory();
             using (var unitOfWork = new UnitOfWork(new RssContext()))
